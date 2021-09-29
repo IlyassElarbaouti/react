@@ -1,5 +1,6 @@
 import React from "react";
 import "./avatar.scss";
+import UserInfo from "./UserInfo";
 
 function Avatar(props) {
   return (
@@ -10,5 +11,4 @@ function Avatar(props) {
         />
   );
 }
-
 export default Avatar;
