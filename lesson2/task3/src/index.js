@@ -15,7 +15,7 @@ const elem = (
 className='seconds'
 style={styles}
 >
-    {seconds}
+    Now is {seconds}
 </div>
 )
 ReactDOM.render(elem,rootElem)
