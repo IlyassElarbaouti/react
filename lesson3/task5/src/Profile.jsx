@@ -8,11 +8,10 @@ function Profile(userData) {
     const year = birthDate.getFullYear()
     const birthDay = `${day} ${month} ${year}`
     return (
-        <div>
-            <h1 className="profile__name">{userData.firstName} {userData.lastName}</h1>
-            <p className="profile__birth">Was born {birthDay} in {userData.birthPlace}</p>
-            
-        </div>
+    <div className="profile">
+      <div className="profile__name">{`${userData.firstName} ${userData.lastName}`}</div>
+      <div className="profile__birth">{`Was born ${birthDay} in ${userData.birthPlace}`}</div>
+    </div>
     )
 }
 
