@@ -8,7 +8,7 @@ function Greeting(props) {
     if (m < 0 || (m === 0 && today.getDate() < birth.getDate())) {
         age--;}
     return (
-        <div firstName={props.firstName} lastName={props.lastName} date={props.birthDate}>
+        <div className="greeting" firstName={props.firstName} lastName={props.lastName} date={props.birthDate}>
             My name is {props.firstName} {props.lastName}. I'm {age} years old
         </div>
     )
