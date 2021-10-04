@@ -1,12 +1,8 @@
 import React from 'react'
+import moment from 'moment';
 
 function Profile(props) {
-    const birthDate =new Date(props.userData.birthDate);
-    const day = birthDate.getDate();
-    const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul","Aug", "Sep", "Oct", "Nov", "Dec"];
-    const month = months[birthDate.getMonth()];
-    const year = birthDate.getFullYear()
-    const birthDay = `${day} ${month} ${year}`
+     const birthDay = moment(new Date(props.userData.birthDate)).format('DD MMM YY')
     return (
     <div className="profile">
       <div className="profile__name">{`${props.userData.firstName} ${props.userData.lastName}`}</div>
