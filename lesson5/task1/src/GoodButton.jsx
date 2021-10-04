@@ -5,8 +5,8 @@ function GoodButton() {
         alert('Good job!')
     };
     return (
-        <button onClick={clickHandler}>
-            click me
+        <button className='fancy-button' onClick={clickHandler}>
+            click me!
         </button>
     )
 }
