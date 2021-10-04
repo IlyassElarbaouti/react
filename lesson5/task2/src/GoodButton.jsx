@@ -1,14 +1,15 @@
-import React from 'react'
+import React, { Component } from 'react'
 
-function GoodButton() {
-    const clickHandler = (event)=>{
-        alert(event.target.innerHTML)
+export default class GoodButton extends Component {
+    clickHandler(event){
+        alert(event.target.textContent)
     };
-    return (
-        <button className='fancy-button' onClick={clickHandler}>
-            click me!
+    
+    render() {
+        return (
+        <button className='fancy-button' onClick={this.clickHandler}>
+            hi there!
         </button>
-    )
+        )
+    }
 }
-
-export default GoodButton
