@@ -1,14 +1,24 @@
-import React, { Component } from 'react'
+import React from 'react';
 
-export default class Toggler extends Component {
-    toggler(e){
-        e.target.textContent === 'Off'?e.target.textContent='On':e.target.textContent='Off'
-    }
-    render() {
-        return (
-            <button onClick={e=>this.toggler(e)} className='toggler'>
-                Off
-            </button>
-        )
-    }
+class Toggler extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      stateBtn: 'Off',
+    };
+  }
+  clickHandler = () => {
+    this.setState({
+      stateBtn: this.state.stateBtn === 'Off' ? 'On' : 'Off',
+    });
+  };
+  render() {
+    return (
+      <button className="toggler" onClick={this.clickHandler}>
+        {this.state.stateBtn}
+      </button>
+    );
+  }
 }
+
+export default Toggler;
