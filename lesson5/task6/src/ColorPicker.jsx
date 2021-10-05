@@ -7,7 +7,7 @@ class ColorPicker extends Component {
       title: '',
     };
   }
-  getColor = color => {
+  setColor = color => {
     this.setState({
       title: color,
     });
@@ -26,17 +26,17 @@ class ColorPicker extends Component {
         <div>
           <button
             className="picker__button picker__button_coral"
-            onMouseEnter={() => this.getColor('Coral')}
+            onMouseEnter={() => this.setColor('Coral')}
             onMouseLeave={() => this.clearColor()}
           ></button>
           <button
             className="picker__button picker__button_aqua"
-            onMouseEnter={() => this.getColor('Aqua')}
+            onMouseEnter={() => this.setColor('Aqua')}
             onMouseLeave={() => this.clearColor()}
           ></button>
           <button
             className="picker__button picker__button_bisque"
-            onMouseEnter={() => this.getColor('Bisque')}
+            onMouseEnter={() => this.setColor('Bisque')}
             onMouseLeave={() => this.clearColor()}
           ></button>
         </div>
