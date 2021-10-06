@@ -25,7 +25,7 @@ export default class Page extends Component {
             <Message text={this.state.text}/>
             <button className="btn" onClick={()=>this.setText(text1)}>Text 1</button>
             <button className="btn" onClick={()=>this.setText(text2)}>Text 2</button>
-            <button className="btn" onClick={()=>this.setText(null)}>Clear</button>
+            <button className="btn" onClick={()=>this.setText('')}>Clear</button>
         </div>
         )
     }
