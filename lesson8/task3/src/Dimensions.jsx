@@ -26,6 +26,6 @@ export default class Dimensions extends Component {
     document.title = `${width} x ${height}`;
   };
   render() {
-    return <div>{`${this.state.width}px - ${this.state.height}px`}</div>;
+    return <div className='dimensions'>{`${this.state.width}px - ${this.state.height}px`}</div>;
   }
 }
