@@ -1,34 +1,34 @@
-import React, { Component } from "react";
+import React from 'react';
 
-export default class User extends Component {
-  
-  state={
-      user:null
+export default class User extends React.Component {
+  state = {
+    user: null,
+  };
+
+  componentDidMount() {
+    this.fetchUser(this.props.userId);
   }
-  componentDidMount(){
-      this.fetchUser(this.props.userId)
-  }
-  fetchUser = (user)=>{
-      fetch(`https://api.github.com/users/${user}`)
-      .then(data=>data.json())
-      .then(user=>this.setState({
-          user
-      }))
-  }
-  
-    render() {
-        const {user}=this.state
-        const {avatar_url,name , location} = user;
-        if(!user){
-            return null
-        }
+
+  fetchUser = userId => {
+    fetch(`https://api.github.com/users/${userId}`)
+      .then(response => response.json())
+      .then(data => {
+        this.setState({
+          user: data,
+        });
+      });
+  };
+
+  render() {
+    const { user } = this.state;
+    if (!user) {
+      return null;
+    }
+    const { avatar_url, name, location } = user;
+
     return (
-      <div classNameName="user">
-        <img
-        className='user__avatar'
-          alt="User Avatar"
-          src={avatar_url}
-        />
+      <div className="user">
+        <img alt="User Avatar" src={avatar_url} className="user__avatar" />
         <div className="user__info">
           <span className="user__name">{name}</span>
           <span className="user__location">{location}</span>
