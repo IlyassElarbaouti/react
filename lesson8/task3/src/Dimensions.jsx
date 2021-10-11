@@ -11,7 +11,10 @@ export default class Dimensions extends Component {
     const { innerWidth, innerHeight } = window;
     this.setDimensions(innerWidth, innerHeight);
   }
-  onResize = e => {
+  componentWillUnmount() {
+    window.removeEventListener("resize", this.onResize);
+  }
+  onResize = (e) => {
     const { innerWidth, innerHeight } = e.target;
     this.setDimensions(innerWidth, innerHeight);
   };
@@ -22,10 +25,6 @@ export default class Dimensions extends Component {
     });
     document.title = `${width} x ${height}`;
   };
-
-  componentWillUnmount() {
-    window.removeEventListener("resize", this.onResize);
-  }
   render() {
     return <div>{`${this.state.width}px - ${this.state.height}px`}</div>;
   }
