@@ -1,7 +1,7 @@
 import React from 'react';
 
-
 class UserForm extends React.Component {
+
   setRef = node => {
     console.log(node);
     this.formRef = node;
@@ -13,7 +13,6 @@ class UserForm extends React.Component {
         ref={this.setRef}
         className="login-form"
         onSubmit={() => {
-          // event.preventDefault();
           const formData = [...new FormData(this.formRef)].reduce(
             (acc, [name, value]) => ({ ...acc, [name]: value }),
             {},
@@ -58,5 +57,3 @@ class UserForm extends React.Component {
     );
   }
 }
-
-export default UserForm;
