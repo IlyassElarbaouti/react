@@ -21,9 +21,9 @@ export default class App extends Component {
 
   render() {
     return (
-      <div class="page">
-        <h1 class="title">Hello, {this.state.userName.firstName}</h1>
-        <main class="content">
+      <div className="page">
+        <h1 className="title">Hello, {this.state.userName.firstName}</h1>
+        <main className="content">
           <ShoppingCart userName={this.state.userName} />
 
           <Profile
