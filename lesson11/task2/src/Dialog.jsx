@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Dialogue = ({closeHandler,isOpen,children,title}) => {
+const Dialog = ({closeHandler,isOpen,children,title}) => {
     if(!isOpen){
         return null
     }
@@ -17,4 +17,4 @@ const Dialogue = ({closeHandler,isOpen,children,title}) => {
     );
 }
 
-export default Dialogue
+export default Dialog

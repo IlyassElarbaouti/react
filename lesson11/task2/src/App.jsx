@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Dialogue from "./Dialogue.jsx";
+import Dialogue from "./Dialog.jsx";
 
 export default class App extends Component {
   state = {
