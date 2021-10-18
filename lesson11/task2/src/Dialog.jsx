@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Dialog = ({closeHandler,isOpen,children,title}) => {
+const Dialog = ({onClose,isOpen,children,title}) => {
     if(!isOpen){
         return null
     }

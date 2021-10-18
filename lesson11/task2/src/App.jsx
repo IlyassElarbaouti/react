@@ -21,7 +21,11 @@ export default class App extends Component {
         <button onClick={this.showHandler} className="btn">
           Show dialog
         </button>
-        <Dialogue title='recommendations' closeHandler={this.closeHandler} isOpen={this.state.isOpen}>
+        <Dialogue
+          title="recommendations"
+          onClose={this.closeHandler}
+          isOpen={this.state.isOpen}
+        >
           <p>
             Use immutable array methods to work with data. It will help to avoid
             bugs
