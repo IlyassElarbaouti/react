@@ -9,11 +9,9 @@ export default class App extends Component {
   showHandler=()=>{
     this.state.isShown
       ? this.setState({
-          isShown: false,
+          isShown: !this.state.isShown,
         })
-      : this.setState({
-          isShown: true,
-        });
+      
     
   }
   render() {
