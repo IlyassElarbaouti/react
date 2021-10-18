@@ -1,6 +1,6 @@
 import React from 'react'
 
-const ProductList = ({cartItems}) => {
+const ProductsList = ({cartItems}) => {
     const renderList=cartItems.map(item=>(<li className="products__list-item">
             <span className="products__item-name">{item.name}</span>
             <span className="products__item-price">${item.price}</span>
@@ -18,4 +18,4 @@ const total = cartItems.map(item=>item.price).reduce((acc,itemPrice)=>acc+itemPr
       </div>
     )
 }
-export default ProductList
+export default ProductsList

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import CartTitle from './CartTitle.jsx'
-import ProductList from './ProductList.jsx'
+import ProductsList from './ProductsList.jsx'
 
 export default class ShoppingCart extends Component {
     constructor({userName}){
@@ -16,7 +16,7 @@ export default class ShoppingCart extends Component {
         return (
             <>
         <CartTitle  count={count} userName={this.props.userName}/>
-        <ProductList cartItems={this.state.cartItems}/>
+        <ProductsList cartItems={this.state.cartItems}/>
         </>
         )
     }
