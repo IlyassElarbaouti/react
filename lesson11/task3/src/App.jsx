@@ -7,8 +7,7 @@ export default class App extends Component {
     isShown:false
   }
   showHandler=()=>{
-    this.state.isShown
-      ? this.setState({
+this.setState({
           isShown: !this.state.isShown,
         })
       
