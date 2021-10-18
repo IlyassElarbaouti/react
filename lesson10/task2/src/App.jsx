@@ -22,7 +22,7 @@ export default class App extends Component {
   render() {
     return (
       <div className="page">
-        <h1 className="title">Hello, {this.state.userName.firstName}</h1>
+        <h1 className="title">Hello, {this.state.userName.firstName} {this.state.userName.lastName}</h1>
         <main className="content">
           <ShoppingCart userName={this.state.userName} />
 
