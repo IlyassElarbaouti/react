@@ -8,7 +8,7 @@ const Dialog = ({onClose,isOpen,children,title}) => {
       <div className="dialog">
         <div className="dialog__heading">
           <h4 className="dialog__title">{title}</h4>
-          <button onClick={closeHandler} className="dialog__close-btn">
+          <button onClick={onClose} className="dialog__close-btn">
             +
           </button>
         </div>
