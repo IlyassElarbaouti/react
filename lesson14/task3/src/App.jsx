@@ -1,12 +1,11 @@
 import React from "react";
-import Demo from "./Demo.jsx";
+import Dimensions from "./Dimensions.jsx";
+
 
 
 
 const App = () => {
-  return (
-  <Demo/>
-  )
+  return <Dimensions />;
 };
 
 export default App;
