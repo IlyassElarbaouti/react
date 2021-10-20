@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Dimensions from './Dimension.jsx';
+import Dimension from './Dimensions.jsx';
 
 const Demo = () => {
     const [isVisible,setIsVisible]=useState(false)
@@ -13,7 +13,7 @@ const Demo = () => {
             Hide
           </button>
         </div>
-        {isVisible && <Dimensions />}
+        {isVisible && <Dimension />}
       </div>
     );
 }
