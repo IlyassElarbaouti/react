@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Dimensions from './Dimensions.jsx';
+import Dimensions from './Dimension.jsx';
 
 const Demo = () => {
     const [isVisible,setIsVisible]=useState(false)
