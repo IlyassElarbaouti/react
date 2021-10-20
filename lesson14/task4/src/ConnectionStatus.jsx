@@ -1,17 +1,17 @@
 import React, { useEffect, useState } from "react";
 
 const ConnectionStatus = () => {
-  const [status, setStatus] = useState("Online");
+  const [status, setStatus] = useState("online");
   useEffect(() => {
-    window.addEventListener("offline", () => setStatus("Offline"));
-    window.addEventListener("online", () => setStatus("Online"));
+    window.addEventListener("offline", () => setStatus("offline"));
+    window.addEventListener("online", () => setStatus("online"));
     return () => {
-      window.removeEventListener("offline", () => setStatus("Offline"));
-      window.removeEventListener("online", () => setStatus("Online"));
+      window.removeEventListener("offline", () => setStatus("offline"));
+      window.removeEventListener("online", () => setStatus("online"));
     };
   }, []);
   return (
-    <div className={`status ${status === "Offline" ? "status_offline" : ""}`}>
+    <div className={`status ${status === "offline" ? "status_offline" : ""}`}>
       {status}
     </div>
   );
