@@ -7,13 +7,15 @@ const Clock = ({location,offset}) => {
       .utcOffset(Number(offset) * 60)
       .format("LTS"));
 
-      useEffect(()=>
-          setInterval(() => 
+      useEffect(()=>{
+        const myInterval = setInterval(() => 
               setTime(moment
       .utc(new Date())
       .utcOffset(Number(offset) * 60)
       .format("LTS"))
           , 1000)
+        return clearInterval(myInterval)
+        }
       ,)
   return (
     <div className="clock">
